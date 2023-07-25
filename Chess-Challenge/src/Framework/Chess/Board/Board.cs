@@ -68,7 +68,7 @@ namespace ChessChallenge.Chess
 
 
 
-        public Board(Board source = null)
+        public Board(Board? source = null)
         {
             if (source != null)
             {
@@ -76,10 +76,10 @@ namespace ChessChallenge.Chess
                 LoadPosition(fen);
 
                 RepetitionPositionHistory = new(source.RepetitionPositionHistory);
-                //AllGameMoves = new(source.AllGameMoves);
-                //Console.WriteLine(source.gameStateHistory.Count);
-                //gameStateHistory = new(source.gameStateHistory);
+                AllGameMoves = new(source.AllGameMoves);
+           
                 currentGameState = source.currentGameState;
+               
             }
 
         }
